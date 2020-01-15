@@ -125,17 +125,43 @@ eg.两个线程one,two从内存位置V中取出A，线程two操作将值变成B�
 
 # Collection
 ## P20 集合类不安全之并发修改异常
+`ArrayList`HashSet``HashMap`多线程下并发不安全
 
+解决：`CopyOnWriteArrayList``CoyOnWriteArraySet``ConCurrentHashMap`
 
+## P22 结合不安全Set
+HashSet底层就是HashMap实现
 
+HashSet add是一个值，HashMap是K，V对，实际HashSet的add也是用HashMap的add，只是只添加key,value是Object类型的常量，只关系K,不关心V
 
+# JavaLock
+## Java锁之公平和非公平锁
+**公平锁**多个线程安装申请锁的顺序来获取锁，类似排队打饭，先来后到
 
+**非公平锁**多个线程获取锁的顺序并不是按照申请锁的顺序，有可能后申请的线程比先申请的线程优先获取锁，在高并发的情况下，有可能会造成优先级反转或者饥饿现象
 
+并发包的ReentranLock的创建可以指定构造函数的Boolean类型来得到公平锁和非公平锁，默认的是非公平锁。非公平锁的优点在于吞吐量比公平锁大。对于
+Synchronized而言，也是一种非公平锁。
 
+## P26 可重入锁（又名递归锁）
+**可重入锁：**同一个线程外层函数获取锁后，内层递归函数仍然能获取得到该锁的代码，同一个线程在外层方法获取锁的时候，在进入内层的方法会自动获取锁，
+也就是说，线程可以进入任何一个它已经拥有的锁所同步着的代码块。
 
+*`ReentrantLock``Synchronized`*是可重入锁，可重入锁最大的作用是避免死锁。
 
+## P28 自旋锁（SpinLock）
+**自旋锁：**尝试获取锁的线程不会立即阻塞，而是采用循环的方式去尝试获取锁，这样的好处是减少线程上下文切换的消耗，缺点是循环会消耗CPU。
 
-## P10 CountDownLatch
+## P30 Java读写锁（ReentrantReadWriteLock）
+**独占锁：**该锁一次只能被一个线程所持有
+
+*`ReentrantLock``Synchronized`*都是独占锁
+
+**共享锁：**该锁可被多个线程所持有
+
+对ReentrantReadWriteLock其读锁是共享锁，写锁是独占锁，读锁可保证并发读是高效的，读写/写读/写写过程互斥，不共存。
+
+## P32 CountDownLatch
 `CountDownLatch` 主要有两个方法，当一个或者多个线程调用`await` 方法时，调用线程会被阻塞，其他线程调用`countdown`
 方法会将计数器减1（调用线程不会阻塞），当计数器的值为0时，因调用`await`方法被阻塞的线程会被唤醒，继续执行。
 
