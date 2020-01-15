@@ -18,9 +18,17 @@
 
 并发包：`java.util.concurrent` `java.util.concurrent.atomic` `java.until.concurrent.locks`
 
-并发和并行的区别
+**并发和并行的区别**
 并发：多个线程同时访问一个资源（秒杀）
 并行：多个线程（事情）同时去做
+
+## P3 JMM(Java内存模型)之可见性
+### JMM Java Memory Model
+本身是抽象的概念，它描述的是一组规则或规范，通过者个规范定义了程序中各个变量
+（实例字段，静态字段和构成数组对象的元素）的访问方式
+
+
+
 
 ## P32 CountDownLatch
 
