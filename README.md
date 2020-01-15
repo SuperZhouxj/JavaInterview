@@ -1,14 +1,19 @@
 ## P1 几大公司面试必问
 
 -JVM/GC
+
 -多线程与高并发（JUC）
+
 -Java集合类
 
 ## P2 Volitile
 
 `volatile`:Java虚拟机提供的轻量级的同步机制。
+
 -保证可见性
+
 -不保证原子性
+
 -禁止指令重排
 
 并发包：`java.util.concurrent` `java.util.concurrent.atomic` `java.until.concurrent.locks`
