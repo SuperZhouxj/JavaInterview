@@ -26,9 +26,12 @@
 ### JMM Java Memory Model
 本身是抽象的概念，它描述的是一组规则或规范，通过者个规范定义了程序中各个变量
 （实例字段，静态字段和构成数组对象的元素）的访问方式
-
-
-
+![Java内存模型](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P3_JMM.PNG)
+每个线程都有自己的工作内存（私有工作区域），JMM规定所有变量存在主内存中，
+如果线程对变量操作，要将主内存中变量拷贝到自己的内存操作，完成再写回主内存，
+线程间的通信（传值）必须通过主内存完成。
+### JMM可见性
+一个线程修改主内存值后，及时通知其他线程的机制
 
 ## P32 CountDownLatch
 
