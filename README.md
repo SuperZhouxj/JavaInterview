@@ -203,4 +203,5 @@ public static void main(String args[]){
     }
 ```
 
-
+##P34 Samephore
+信号量主要用于两个目的：一个时用于多个共享资源的互斥使用，一个用于并发线程数的控制，类似与争车位。
