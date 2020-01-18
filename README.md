@@ -203,5 +203,30 @@ public static void main(String args[]){
     }
 ```
 
-##P34 Samephore
+## P34 Samephore
 信号量主要用于两个目的：一个时用于多个共享资源的互斥使用，一个用于并发线程数的控制，类似与争车位。
+
+## P36  阻塞队列（BlockingQueue）
+![阻塞队列模型](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P36_blockQueue.PNG)
+
+试图从空的阻塞队列中获取元素的线程将会被阻塞，直到其它的线程往空的队列插入新的元素。
+同样，试图往已满的阻塞队列中添加新元素的线程同样也会被阻塞，直到其它的线程从列中移除
+一个或者多个元素或者完全清空队列后使队列重新变得空闲起来并后续增加。
+
+在多线程领域：所谓阻塞，在某些情况下会挂起线程（即阻塞），一旦添加满足，被挂起的先后又会被自动
+唤醒。
+
+**为什么需要BlockingQueue?**
+
+好处是我们不需要关心什么时候需要阻塞线程，什么时候需要唤醒线程，英文这一切Blockingqueue
+都给你一手包办了
+
+**BlockingQueue种类**
+
+![阻塞队列种类](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P36_BlockingQueueClassPNG.PNG.PNG)
+
+## P40 阻塞队列之同步SynchronousQueue队列
+SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue是一个不存储元素的BlockingQueue
+每个put操作必须等待一个take操作，否则不能继续添加元素，反之亦然。
+
+
