@@ -231,3 +231,6 @@ SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue�
 
 ## P42 Synchronized和Lock的区别
 ![阻塞队列种类](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P42_SynchronizedandLockDifference.PNG)
+
+## P46 线程池的使用和优势
+![线程池的使用和优势](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P46_ThreadPool.PNG)
