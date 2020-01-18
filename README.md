@@ -223,10 +223,11 @@ public static void main(String args[]){
 
 **BlockingQueue种类**
 
-![阻塞队列种类](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P36_BlockingQueueClassPNG.PNG.PNG)
+![阻塞队列种类](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P36_BlockingQueueClassPNG.PNG)
 
 ## P40 阻塞队列之同步SynchronousQueue队列
 SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue是一个不存储元素的BlockingQueue
 每个put操作必须等待一个take操作，否则不能继续添加元素，反之亦然。
 
-
+## P42 Synchronized和Lock的区别
+![阻塞队列种类](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P42_SynchronizedandLockDifference.PNG)
