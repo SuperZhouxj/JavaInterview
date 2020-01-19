@@ -278,12 +278,27 @@ SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue�
 
 补：从而降低新任务的流量
 
-## P51 线程池实际中使用那个
+## P52 线程池实际中使用那个
 eg.你在工作中单一的/固定数的/可变的三种创建线程池的方法，你用哪个？
 
 答：一个都不用，我们生产上自能使用自定义的
 
 ![线程池使用哪个](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P52_ThreadPoolToUseWhich.PNG)
+
+## P54 线程池配置合理线程数
+**CPU密集型**
+
+CPU密集型任务配置尽可能少的线程数量；
+
+一般公式：CPU核数+1个线程的线程池
+
+**IO密集型**
+
+-由于IO密集型任务线程并不是一直在执行任务，则应配置尽可能多的线程
+如CPU核数*2
+
+- ![IO密集](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P54_IOMuch.PNG)
+
 
 
 
