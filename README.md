@@ -234,3 +234,19 @@ SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue�
 
 ## P46 线程池的使用和优势
 ![线程池的使用和优势](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P46_ThreadPool.PNG)
+
+## P47 线程池的常用三种方式
+![线程池newFixedThreadPool](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P47_newFixedThreadPool.PNG)
+
+![线程池newSingleThreadExecutor](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P47_newSingleThreadExecutor.PNG)
+
+![线程池newCachedThreadPool](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P47_newCachedThreadPool.PNG)
+
+**获得和使用Java多线程的4中方法**
+-继承Thread类
+
+-实现Runable接口，Runable接口没有返回值，不抛异常
+
+-实现Callable接口，有返回值，会抛异常。
+
+-通过线程池
