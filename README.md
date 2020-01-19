@@ -250,3 +250,18 @@ SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue�
 -实现Callable接口，有返回值，会抛异常。
 
 -通过线程池
+
+## P49 线程池7大参数
+![线程池七大参数](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P49_ThreadPoolSeverAugs.PNG)
+
+### corePoolSize
+1 在创建了线程池后，当有请求任务来了之后，就会安排池中的线程去执行请求任务，近似理解为今日当值线程
+
+2 当线程池中的线程数目达到corePoolSize后，就会把到达的任务放到缓存队列当中。
+### maximunPoolSize
+
+## P50 线程池工作原理
+![线程池工作原理](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P50_ThreadPoolTheory.PNG)
+
+
+![线程池工作原理描述](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P50_ThreadPoolTheoryDesc.PNG)
