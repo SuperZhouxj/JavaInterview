@@ -243,13 +243,13 @@ SynchronousQueue没有容量。与其他BlockingQueue不同，SynchronousQueue�
 ![线程池newCachedThreadPool](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P47_newCachedThreadPool.PNG)
 
 **获得和使用Java多线程的4中方法**
--继承Thread类
+- 继承Thread类
 
--实现Runable接口，Runable接口没有返回值，不抛异常
+- 实现Runable接口，Runable接口没有返回值，不抛异常
 
--实现Callable接口，有返回值，会抛异常。
+- 实现Callable接口，有返回值，会抛异常。
 
--通过线程池
+- 通过线程池
 
 ## P49 线程池7大参数
 ![线程池七大参数](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P49_ThreadPoolSeverAugs.PNG)
@@ -294,7 +294,7 @@ CPU密集型任务配置尽可能少的线程数量；
 
 **IO密集型**
 
--由于IO密集型任务线程并不是一直在执行任务，则应配置尽可能多的线程
+- 由于IO密集型任务线程并不是一直在执行任务，则应配置尽可能多的线程
 如CPU核数*2
 
 - ![IO密集](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P54_IOMuch.PNG)
