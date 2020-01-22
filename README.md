@@ -299,6 +299,23 @@ CPU密集型任务配置尽可能少的线程数量；
 
 - ![IO密集](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P54_IOMuch.PNG)
 
+## P55 死锁的编码和定位分析
+![死锁的定义](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P55_WhatDeadLock.PNG)
+
+jps -l   显示当前所有java线程的pid命令
+jstack：打印出给定的java进程PID或core file或远程调试服务的Java**堆栈信息**
+
+#JVM
+## P57 JVM体系结构
+![JVM体系结构](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P56_JVMStruct.PNG)
+
+**类装载器**
+根类加载器，扩展类加载器，系统类加载器；
+考点：双亲委派机制，沙箱安全机制 参见https://blog.csdn.net/zhmi_1015/article/details/93966942
+
+**运行时数据区**
+灰色的线程私有，粉色的线程共有，这部分和GC相关
+
 
 
 

@@ -31,5 +31,11 @@ public class DemoLockDemo {
     public static void main(String args[]){
           new Thread(new HoldLockThread ("lockA","lockB"),"ThreadAAA").start();
           new Thread(new HoldLockThread ("lockB","lockA"),"ThreadBBB").start();
+
+        /**
+         * linux ps -ef/grep xxx    ls -l
+         * window下的java运行程序   也有类似ps的查看进程的命令，但是目前我们需要查看的只是java
+         *      jps  =  java ps
+         */
     }
 }
