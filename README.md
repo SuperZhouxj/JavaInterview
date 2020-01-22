@@ -398,7 +398,20 @@ ps:查看某个线程的JVM参数：jinfo -flag InitialHeapSize（MetaspaceSize�
 ![常用基础参数SurvivorRatio](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P70_SurvivorRatio.PNG)
 
 
+## P71 常用基础参数NewRatio
+![常用基础参数NewRatio](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P71_NewRatio.PNG)
 
+## P72 常用基础参数MaxTenuringThreshold
+设置垃圾最大年龄
 
+## P73 强引用Reference
+![强引用Reference](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P73_Reference.PNG)
+
+```java
+ Object object1 = new Object();//等号左边是引用，在栈里面，等号右边是对象，在堆里面
+```
+
+## P74 软引用SoftReference
+![软引用SoftReference](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P74_SoftReference.PNG)
 
 
