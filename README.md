@@ -352,9 +352,9 @@ jstack：打印出给定的java进程PID或core file或远程调试服务的Java
 2.KV设值类型：-XX:属性key=属性值value
 
 ## P63 JVM的XX参数之Xms Xmx坑题
--Xms等价于-XX:initialHeapSize
+-Xms等价于-XX:InitialHeapSize  JVM堆内存初始值    默认为物理内存的1/64
 
--Xmx等价于-XX:MaxHeapSize
+-Xmx等价于-XX:MaxHeapSize   JVM堆内存最大分配值    默认为物理内存的1/4
 
 ## P64 JVM盘点家底查看初始默认值
 ### 查看JVM默认值
@@ -367,10 +367,35 @@ jstack：打印出给定的java进程PID或core file或远程调试服务的Java
 ## P66 堆内存初始大小
 ![堆内存基本知识](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P66_HeapSize.PNG)
 
+```java
+long totalMemory = Runtime.getRuntime().totalMemory();//返回java虚拟机中的内存总量，默认为物理内存的1/64
+        long maxMemory = Runtime.getRuntime().maxMemory();//返回java虚拟机试图使用的最大内存量，默认为物理内存的1/4
+        System.out.println("Total_Memory(-Xms):"+totalMemory+"字节，"+totalMemory/(double)1024/1024+"MB");
+        System.out.println("Total_Memory(-Xmx):"+maxMemory+"字节，"+maxMemory/(double)1024/1024+"MB");
+```
 
+## P67 常用基础参数栈内存Xss
+**栈管运行，堆管存储**
 
+### JVM常用参数
+![JVM常用参数](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P67_JVMCommonParams.PNG)
 
+**-Xss**等价于—XX:ThreadStackSize   设置单个线程栈的大小，一般默认为512K~1024K
 
+## P68 常用基础参数元空间MetaspaceSize
+![JVM常用参数](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P68_MetaspaceSize.PNG)
+
+ps:查看某个线程的JVM参数：jinfo -flag InitialHeapSize（MetaspaceSize） PID
+
+## P69 常用基础参数PrintGCDetails回收前后对比
+![PrintGCDetails回收前后对比](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P69_GCLog.PNG)
+
+![PrintGCDetails回收前后对比](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P69_GCLog1.PNG)
+
+## P70 常用基础参数SurvivorRatio
+![常用基础参数SurvivorRatio理论](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P70_SurvivorRatioTheory.PNG)
+
+![常用基础参数SurvivorRatio](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P70_SurvivorRatio.PNG)
 
 
 
