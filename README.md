@@ -305,16 +305,72 @@ CPU密集型任务配置尽可能少的线程数量；
 jps -l   显示当前所有java线程的pid命令
 jstack：打印出给定的java进程PID或core file或远程调试服务的Java**堆栈信息**
 
-#JVM
+# JVM
 ## P57 JVM体系结构
 ![JVM体系结构](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P56_JVMStruct.PNG)
 
 **类装载器**
-根类加载器，扩展类加载器，系统类加载器；
-考点：双亲委派机制，沙箱安全机制 参见https://blog.csdn.net/zhmi_1015/article/details/93966942
+分类：根类加载器，扩展类加载器，系统类加载器；
+
+考点：双亲委派机制，沙箱安全机制 
+
+参见https://blog.csdn.net/zhmi_1015/article/details/93966942
 
 **运行时数据区**
-灰色的线程私有，粉色的线程共有，这部分和GC相关
+灰色的线程私有，与GC无关；粉色的线程共有，这部分和GC相关
+
+**JVM GC算法**
+![引用计数](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P56_GClgorithm1.PNG)
+
+![复制](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P56_GClgorithm2.PNG)
+
+复制算法多用于新生代
+
+![标记清除](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P56_GClgorithm3.PNG)
+
+标记清除优点：没有进行大规模复制，节约了内存空间。缺点：会产生内存碎片
+
+![标记整理](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P56_GClgorithm4.PNG)
+
+标记整理算法优点：不浪费空间，也不产生内存碎片，缺点：耗时（要整理）
+
+标记清除和标记整理算法多用于老生代
+
+## P58
+枚举根节点做可达性分析（根搜索路径）
+
+![根搜索路径](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P58_GCRoot.PNG)
+
+![可以作为GCRoot对象](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P58_GCRootObject.PNG)
+
+## P59 JVM的标配参数和X参数
+**JVM参数类型**
+- 标配参数(了解)：-version/-help/-showversion
+- X参数（了解）：-Xint(解释执行)/-Xcomp(第一次使用就编译成本地代码)/-Xmixed(混合模式)
+**- XX参数（重点）**
+1.Boolean类型：-XX:+或者-某个属性值（+表示开启；-表示关闭）
+2.KV设值类型：-XX:属性key=属性值value
+
+## P63 JVM的XX参数之Xms Xmx坑题
+-Xms等价于-XX:initialHeapSize
+
+-Xmx等价于-XX:MaxHeapSize
+
+## P64 JVM盘点家底查看初始默认值
+### 查看JVM默认值
+**命令**：java -XX:+PrintFlagsInitial -version   --主要查看初始默认
+
+**命令**：java -XX:+PrintFlagsFinal -version  --主要查看修改更新
+
+**命令**：java -XX:+PrintCommandLineFlags -version  --主要查看命令行参数（参数中有JVM默认的垃圾回收器）
+
+## P66 堆内存初始大小
+![堆内存基本知识](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P66_HeapSize.PNG)
+
+
+
+
+
 
 
 
