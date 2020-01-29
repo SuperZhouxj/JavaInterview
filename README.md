@@ -417,6 +417,10 @@ ps:查看某个线程的JVM参数：jinfo -flag InitialHeapSize（MetaspaceSize�
 ## P75 弱引用WeakReference
 对于只是弱引用的对象来说，只要垃圾回收机制一运行，不管JVM的内存空间是否足够，都会回收该对象占用的内存。
 
+## P76 软引用和弱引用适用场景
+![软引用SoftReference](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P76_SoftWeakReferenceApplication.PNG)
+
+
 
 
 
