@@ -420,6 +420,8 @@ ps:查看某个线程的JVM参数：jinfo -flag InitialHeapSize（MetaspaceSize�
 ## P76 软引用和弱引用适用场景
 ![软引用SoftReference](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P76_SoftWeakReferenceApplication.PNG)
 
+## P78 虚引用
+![软引用SoftReference](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P78_PhantomReference.PNG)
 
 
 
