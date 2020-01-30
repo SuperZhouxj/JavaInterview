@@ -506,3 +506,33 @@ GC，从而造成较大停顿时间。
 
 ## P101 GC之垃圾收集器选择
 ![GC之垃圾收集器选择](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P101_GCChoose.PNG)
+
+## P102 GC之G1收集器 
+![GC之G1收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P102_G1GCDetails.PNG)
+
+![GC之G1收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P102_G1GCDetails1.PNG)
+
+**G1收集器特点**
+
+![GC之G1收集器特点](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P102_G1GCFeature.PNG)
+
+## P103 GC之G1收集器底层原理
+![GC之G1收集器底层原理](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P103_G1GCTheory.PNG)
+
+![GC之G1收集器底层原理](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P103_G1GCTheory1.PNG)
+
+**G1收集器底层回收步骤**
+
+![GC之G1收集器底层回收步骤](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P103_G1GCStep.PNG)
+ 
+![GC之G1收集器底层4步过程](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P103_G1GCStep1.PNG)
+
+
+## P104 GC之G1参数配置及和CMS的比较
+![G1收集器参数配置](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P104_G1GCArgs.PNG)
+ 
+![G1收集器CMS的比较](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P104_G1CompareToCMS.PNG)
+
+
+
+
