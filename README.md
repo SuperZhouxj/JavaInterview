@@ -438,3 +438,64 @@ StackOverFlowError和Java heap space 都属于错误，而非异常
 
 ## P85 OOM之Metaspace
 ![Metaspace](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P87_Metaspace.PNG)
+
+## P90 主要的4种垃圾回收方式
+- 串行垃圾回收器（Serial）
+- 并行垃圾回收器（Parallel）
+- 并发垃圾回收器（CMS）
+- G1垃圾回收器
+
+**串行垃圾回收器**
+它为单线程环境设计且只使用一个线程进行垃圾回收，会暂停所有的用户线程。所以不适合服务器环境
+
+**并行垃圾回收器**
+多个垃圾回收线程并行工作，此时用户线程是暂停的，适用于科学计算/大数据处理首台处理等弱交互场景
+
+**并发垃圾回收器**
+用户线程和垃圾收集线程同时执行（不一定是并行，可以交替执行），不需要停顿用户线程。互联网公司多
+用它，适用对响应时间有要求的场景。
+
+**G1垃圾回收器**
+将堆内存分割成不同的区域然后并发的对其进行垃圾回收
+
+## P91 如何查看虚拟机默认的垃圾回收器
+命令：java -XX:+PrintCommandLineFlags -version
+
+## P92 JVM默认的垃圾回收器
+java的gc回收的类型主要有几种：
+`UseSerialGc`,`UseParallelGC`,`UseConcMarkSweepGC`,`UseParNewGC`,`UseParallelOldGC`,`UseG1GC`
+
+## P93 GC的七种垃圾回收器
+以HotSpot中包含的收集器为例：
+
+![GC的七种垃圾回收器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P93_SevenGC.PNG)
+
+## P95 GC之Serial收集器 
+![GC之Serial收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P95_SerialGCDetails.PNG)
+
+![GC之Serial收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P95_SerialGCDetails1.PNG)
+
+## P96 GC之ParNew收集器 
+![GC之ParNew收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P96_ParNewDetails.PNG)
+
+![GC之ParNew收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P96_ParNewDetails1.PNG)
+
+## P97 GC之Parallel收集器 
+![GC之parallel收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P97_ParallelDetails.PNG)
+
+![GC之parallel收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P97_ParallelDetails1.PNG)
+
+![GC之parallel收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P97_ParallelDetails2.PNG)
+
+**ParNew收集器和Parallel收集器的区别：ParNew收集器在新生代使用，老年代默认使用的Serial收集器（单线程收集器）；Parallel收集器
+在新生代使用，老年代也默认使用并行收集器，如果老年代使用并行收集器，新生代默认使用并行收集器**
+
+## P98 GC之ParallelOld收集器 
+![GC之ParallelOld收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P98_ParallelOldDetails.PNG)
+
+
+
+
+
+
+
