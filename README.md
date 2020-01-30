@@ -533,6 +533,8 @@ GC，从而造成较大停顿时间。
  
 ![G1收集器CMS的比较](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P104_G1CompareToCMS.PNG)
 
+## P106 Linux命令之top
+![Linux命令之top](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P106_LinuxCommand_Top.PNG)
 
 
 
