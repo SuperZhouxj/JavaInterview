@@ -487,15 +487,22 @@ java的gc回收的类型主要有几种：
 
 ![GC之parallel收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P97_ParallelDetails2.PNG)
 
-**ParNew收集器和Parallel收集器的区别：ParNew收集器在新生代使用，老年代默认使用的Serial收集器（单线程收集器）；Parallel收集器
-在新生代使用，老年代也默认使用并行收集器，如果老年代使用并行收集器，新生代默认使用并行收集器**
-
 ## P98 GC之ParallelOld收集器 
 ![GC之ParallelOld收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P98_ParallelOldDetails.PNG)
 
+## P99 GC之CMS收集器 
+![GC之CMS收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P99_CMSDetails.PNG)
 
+![GC之CMS收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P99_CMSDetails1.PNG)
 
+![GC之CMS收集器步骤和特点](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P99_CMSGCStepAndFeature.PNG)
 
+PS:由于并发进行，CMS在收集与应用线程会同时会增加对堆内存的占用，也就是说，CMS必须要在老年代堆内存
+用尽之前完成垃圾回收，否则CMS回收失败，将触发担保机制，串行老年代收集器以STW的方式进行一次
+GC，从而造成较大停顿时间。
 
+## P100 GC之SerialOld收集器 
+![GC之SerialOld收集器](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P100_SerialOldGCDetails.PNG)
 
-
+## P101 GC之垃圾收集器选择
+![GC之垃圾收集器选择](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P101_GCChoose.PNG)
