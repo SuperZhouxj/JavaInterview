@@ -1,3 +1,5 @@
+**视频网址：https://www.bilibili.com/video/av64429441**
+
 ## P1 几大公司面试必问
 
 -JVM/GC
@@ -549,4 +551,25 @@ GC，从而造成较大停顿时间。
 ![Github_高亮显示代码（#L数字）](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P119_Github_Highlight.PNG)
 
 ## P121 Github_搜索区域活跃用户
-![GGithub_搜索区域活跃用户](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P121_Github_SearchUser.PNG)
+![Github_搜索区域活跃用户](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P121_Github_SearchUser.PNG)
+
+
+
+
+**视频网址：https://www.bilibili.com/video/av64423441**
+
+## P2 单例设计模式
+单例设计模式：即某个类在整个系统中只能有一个实例对象可获取和使用的代码模式。
+
+**要点**
+- 某个类只能有一个实例；实现：构造器私有化
+- 它必须自行创建这个实例；实现：含有一个该类的静态变量来保存这个唯一的实例
+- 它必须自行向系统提供这个实例；实现：对外提供获取该实例对象的方式：1.直接暴露2.用静态变量的get方法获取
+
+![单例模式常用几种形式](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P2_Singleton.PNG)
+
+
+
+
+
+
