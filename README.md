@@ -568,6 +568,25 @@ GC，从而造成较大停顿时间。
 
 ![单例模式常用几种形式](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P2_Singleton.PNG)
 
+## P3 类的初始化和实例初始化
+![类的初始化](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P3_ClassInit.PNG)
+
+![实例对象初始化](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P3_ObjectInit.PNG)
+
+![重写](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P3_Override.PNG)
+
+## P4 方法的参数传递机制
+![方法的参数传递机制](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P4_FunctionArgsTransmit.PNG)
+
+![方法的参数传递机制代码分析](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P4_FunctionArgsTransmit1.PNG)
+
+## P6 成员变量和局部变量
+![成员变量和局部变量](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P6_Variable.PNG)
+
+![成员变量和局部变量存储位置](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P6_Variable1.PNG)
+
+![成员变量和局部变量区别](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P6_Variable2.PNG)
+
 
 
 
