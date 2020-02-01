@@ -587,8 +587,60 @@ GC，从而造成较大停顿时间。
 
 ![成员变量和局部变量区别](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P6_Variable2.PNG)
 
+## P11 Mybatis中当实体类中的属性名和表中的字段不一致
+**解决方案**
 
+（1）写sql语句时起别名；
 
+（2）在Mybatis的全局配置文件中开启驼峰命名规则
 
+（3）在mapper映射文件中使用resultMap来自定义映射规则
 
+## P13 Git分支和工作流
+![Git分支](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P13_Git_Branch.PNG)
+
+![Git工作量](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P13_Git_Flow.PNG)
+
+## P14 redis持久化
+**Redis提供了两种不同的持久化方式**
+- RDB(Redis DataBase)
+
+- AOF(Append Of File)
+
+**RDB**
+在指定的时间间隔内将内存中的数据集快照写入磁盘，也就是行话的Snapshot快照，它
+恢复时是将快照文件直接读到内存里
+
+![RDB优缺点](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P14_Redis_RDB.PNG)
+
+**AOF**
+_以日志的形式来记录每个写操作_，将Redis执行过的所以写指令记录下来（读操作不记录），
+只许追加文件不可以改写文件，redis启动之初会读取该文件重新构建数据，换言之，redis
+重启的话就根据日志文件的内容将写指令从前到后执行一次已完成数据的恢复工作。
+
+![AOF优缺点](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P14_Redis_AOF.PNG)
+
+## P15 Mysql什么时候用上索引
+![索引优缺点](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P15_Mysql_Index.PNG)
+
+![索引适用不适用场合](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P15_Mysql_Index_Where.PNG)
+
+ps:过滤性不好指加索引过滤的数据不多，比如：性别
+
+## P16 JVM垃圾回收机制
+**GC发生在JVM的堆内存中**
+
+![GC种类和各自的算法](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P16_JVM_GC.PNG)
+
+**复制算法**
+- 优点：没有标记清除过程，效率高；没有内存碎片
+- 缺点：需要双倍的内存空间
+
+**标记清除**
+- 优点：不需要额外空间
+- 缺点：两个扫描，耗时严重；会产生内存碎片
+
+**标记压缩（标记整理）**
+- 优点：没有内存碎片
+- 缺点：需要移动对象成本
 
