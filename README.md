@@ -644,3 +644,17 @@ ps:过滤性不好指加索引过滤的数据不多，比如：性别
 - 优点：没有内存碎片
 - 缺点：需要移动对象成本
 
+## P18 Elasticsearch和Solr区别
+![Elasticsearch和Solr区别](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P18_ESAndSolr.PNG)
+
+## P19 单点登陆
+**单点登陆**：一处登陆多处使用，一般多用于分布式系统中
+
+![单点登陆](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P19_SingleLogin.PNG)
+
+![单点登陆](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P19_SingleLogin1.PNG)
+
+## P21 消息队列
+![单点登陆](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/Extra_P21_MegQueue.PNG)
+
+
