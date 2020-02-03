@@ -20,7 +20,7 @@ public class SingletonDemo {
 
     public static void main(String args[]){
         //单线程（main函数的操作动作。。。。）
-//        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
+//          System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
 //        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
 //        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
 

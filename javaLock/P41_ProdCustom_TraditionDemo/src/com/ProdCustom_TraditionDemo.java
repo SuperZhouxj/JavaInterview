@@ -4,6 +4,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 生产一个，消费一个
+ */
 class ShareDate{
     private Integer number = 0;
     private Lock lock = new ReentrantLock();

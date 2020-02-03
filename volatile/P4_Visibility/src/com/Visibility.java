@@ -29,7 +29,8 @@ class Mydate{
 
 public class Visibility {
     public static void main(String args[]){
-        badAtomicforvolatile();
+        seeOkByvolatile();
+        //badAtomicforvolatile();
     }
     //volatile不能保证原子性
     private static void badAtomicforvolatile() {
