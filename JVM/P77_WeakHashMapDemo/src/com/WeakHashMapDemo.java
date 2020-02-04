@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.WeakHashMap;
 
 /**
- * 弱引用的应用WeakHashMAp，系统垃圾回收后被回收
+ * 弱引用的应用WeakHashMap，系统垃圾回收后被回收
  */
 public class WeakHashMapDemo {
     public static void main(String args[]){

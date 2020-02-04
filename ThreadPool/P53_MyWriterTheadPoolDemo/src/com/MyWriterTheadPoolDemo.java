@@ -18,17 +18,17 @@ public class MyWriterTheadPoolDemo {
                 TimeUnit.SECONDS,
                 new LinkedBlockingQueue<Runnable>(3),
                 Executors.defaultThreadFactory(),
-                //new ThreadPoolExecutor.AbortPolicy()
+                new ThreadPoolExecutor.AbortPolicy()
                 //new ThreadPoolExecutor.CallerRunsPolicy()
                 //new ThreadPoolExecutor.DiscardOldestPolicy()
-                new ThreadPoolExecutor.DiscardPolicy()
+                //new ThreadPoolExecutor.DiscardPolicy()
         );
         try {
-            for (int i = 1; i <= 10; i++) {
+            for (int i = 1; i <= 9; i++) {
                 threadPool.execute(() -> {
                     System.out.println(Thread.currentThread().getName() + "\t 办理成功");
                 });
-                // TimeUnit.SECONDS.sleep(1);
+                 //TimeUnit.SECONDS.sleep(1);
             }
         } catch (Exception e) {
             e.printStackTrace();

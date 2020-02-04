@@ -305,6 +305,7 @@ CPU密集型任务配置尽可能少的线程数量；
 ![死锁的定义](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P55_WhatDeadLock.PNG)
 
 jps -l   显示当前所有java线程的pid命令
+
 jstack：打印出给定的java进程PID或core file或远程调试服务的Java**堆栈信息**
 
 # JVM
@@ -435,10 +436,12 @@ StackOverFlowError和Java heap space 都属于错误，而非异常
 ## P85 OOM之Direct Buffer Memory
 ![Direct Buffer Memory](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P85_DirectBufferMemory.PNG)
 
-## P85 OOM之unable to create new native thread
+## P86 OOM之unable to create new native thread
 ![unable to create new native thread](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P86_UnableCreateNewThread.PNG)
 
-## P85 OOM之Metaspace
+永久代就是方法区，存在于堆内存中
+
+## P88 OOM之Metaspace
 ![Metaspace](https://github.com/SuperZhouxj/JavaInterview/blob/master/images/P87_Metaspace.PNG)
 
 ## P90 主要的4种垃圾回收方式
